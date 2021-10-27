@@ -1,0 +1,475 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
+
+:root {
+   /* --primary: rgb(146, 146, 146); */
+  --primary: #216145ec;
+  --secondary: #35ce84;
+  --white: #fff;
+    --primaryLightColor: #d4e6a5;
+  --primaryColor: #476a2e;
+  --primaryDarkColor: #c02c03;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBackground: #f1f5f8;
+  --mainOverlay: rgba(35, 10, 36, 0.4);
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #afafaf;
+  --mainRed: #bd0303;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 0.3rem;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  --mainBorderRadius: 0.25rem;
+  --smallWidth: 85vw;
+  --maxWidth: 40rem;
+  --fullWidth: 1170px;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 0;
+  margin: 0;
+  background: url('./images/12-1.jpg')  no-repeat center center fixed; 
+
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ 
+         
+
+}
+
+.container {
+   
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.btn {
+  padding: 10px 15px;
+  background-color: rgb(72, 123, 76);
+  color:white;
+   text-shadow: 1px 1px 2px black;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  border: none;
+  font-size: 1rem;
+  /* transition: all 0.3s ease; */
+  line-height: 1.1;
+}
+
+.btn:hover {
+  background-color: #1aa762;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* Header Styles */
+header {
+  
+  top: 0;
+  background-color: var(--primary);
+   box-shadow: 1px 5px 8px whitesmoke;
+}
+
+header .inner-content {
+   text-shadow: 1px 1px 2px black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+header a {
+  color: var(--white);
+  font-size: 2.00rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+header a:hover {
+   color: rgb(72, 255, 0);
+  opacity: 0.7;
+}
+
+header .brand a {
+  font-weight: 900;
+  font-size: 1.8rem;
+}
+
+header .nav-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+header .nav-links li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+header .nav-links li:last-child {
+  margin-right: 0;
+}
+
+/* Add Page */
+.add-content {
+  padding: 50px 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.add-content .input-wrapper input {
+  width: 100%;
+  background-color: whitesmoke;
+  box-shadow: 10px 10px 8px black;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  color:black;
+  font-size: 1.25rem;
+}
+
+.results {
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.results li {
+  list-style: none;
+}
+
+.result-card {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.result-card .poster-wrapper  img {
+ 
+  width: 125px;
+  height: 203px;
+  background-color: #dbdada;
+  box-shadow: 5px 5px 10px white;
+  border-radius: 5px;
+  margin-right: 15px;
+  display: block;
+  color: transparent;
+}
+
+
+
+.result-card .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.result-card .info .title {
+  font-size: 2.00rem;
+  text-shadow: 2px 2px 2px white;
+  color: black;
+  font-weight: 600;
+  margin: 0;
+}
+
+.result-card .info .release-date {
+  font-size: 2.25rem;
+  text-shadow: 1px 1px 10px rgb(31, 255, 2);
+  font-weight: 500;
+  color: black;
+  margin: 0;
+}
+
+.result-card .controls button {
+  text-shadow: 1px 1px 2px black;
+  margin-right: 10px;
+}
+
+/* Movie Page */
+.movie-page {
+  padding: 30px 0;
+}
+
+.movie-page .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.count-pill {
+  display: block;
+  background-color: var(--secondary);
+  padding: 5px 15px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 999px;
+  color: var(--primary);
+}
+
+.movie-page .heading {
+   font-size: 4.25rem;
+   color: black;
+   text-shadow: 1px 1px 2px white;
+   text-align: center;
+   margin: 0;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+@media (min-width: 992px) {
+  .movie-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.movie-card {
+     box-shadow: 5px 5px 10px greenyellow;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  border: 0;
+  display: block;
+}
+
+.movie-card img {
+  width: 100%;
+  display: block;
+}
+
+.movie-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.movie-card:hover .overlay {
+  border: 3px solid var(--secondary);
+}
+
+.movie-card .inner-card-controls {
+  display: inline;
+  background-color: red;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  padding: 3px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.movie-card:hover .inner-card-controls {
+  opacity: 1;
+}
+
+.ctrl-btn {
+  color: #fefefe;
+  background-color: transparent;
+  border: none;
+  transition: all 0.3s ease;
+  font-size: 1.25rem;
+  padding: 5px;
+  margin: 0;
+}
+
+.ctrl-btn:hover {
+  color: var(--secondary);
+  cursor: pointer;
+}
+
+.movie-page .no-movies {
+  color: white;
+  font-size: 4rem;
+  text-align: center;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 1px 1px 2px black;
+}
+.page-link {
+   padding: 10px 15px;
+  background-color: rgb(72, 123, 76);
+  color:white;
+   text-shadow: 1px 1px 2px black;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  border: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  line-height: 1.1;
+}
+.strelka {
+      padding: 10px 15px;
+  background-color: rgb(72, 123, 76);
+  color:white;
+   text-shadow: 1px 1px 2px black;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  border: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  line-height: 1.1;
+}
+
+
+
+/* dole e modal prekopirano css od cocktail so modal mojata vezba */
+
+.modal {
+   position:absolute;
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(0,0,0, 0.6);
+   display: none;
+   align-items: center;
+   justify-content: center;
+
+   /* ovie tri linii dole dodadeni za da moze animirano poleka da se pojavuva overlayot
+   Morase i vo modal.js da napravime izmena t.e go trgnavme if za proveka na (!show) kade so ova pravevme logika da ako ne e true da vrati null. Odnosno da na klik na show modal kopceto stane od false vo true preku setShow */
+   /*ova e novoto kade sega neli preku css rabotime so show i close za razlika od predhodno kade 
+   so if direkt vo modal.js opredeluvavme dali ke prodolzi so return na jsx-ot ili ke e null 
+    className={`modal ${show ? 'show' : ''}`}       */
+   /* opacity: 0;*/
+   transition: all 0.3s ease-in-out; 
+   pointer-events: none;
+ 
+}
+
+/* ova e normalno za da otkako smenivme da ideme so animacija da ima ako e true show da se pokaze modalot */
+/* iako celata logika e da mozememsto sakame tuka napravie ima mnogu nacini kako da se pojavi ili ne modalot. primer ne mora da e so opacity ili slide efektot  */
+.modal.show {
+/* opacity: 1; */
+display: inline-block;
+pointer-events: visible;
+}
+
+.modal-content {
+    width: 1400px;
+   background-color: rgb(167, 187, 110);
+   border-radius: 4%;
+   text-align: center;
+
+   /* Ovie 2 linii se za da moze da se slide contenetot na samata page kako bi bilo po animirano */
+  transform: translateY(-200px);
+   transition: all 0.3s ease-in-out;
+}
+
+/* i ova e dodadeno za da ima slide od gore effekt na modal contentot */
+.modal.show .modal-content{
+  transform: translateY(0);
+}
+
+
+.modal-header, .modal-footer {
+padding: 10px;
+}
+
+.modal-body {
+   padding: 10px;
+   border-top: 1px solid #eee;
+   border-bottom: 1px solid #eee;
+}
+
+.modal-title {
+   margin: 0;
+}
+
+/* dodadeno copy paste isto ko za modalot */
+ .cocktail-section {
+  text-align: center;
+}
+.drink {
+  width: var(--smallWidth);
+  max-width: var(--fullWidth);
+  margin: 0 auto;
+  text-align: left;
+}
+.drink img {
+  border-radius: var(--mainBorderRadius);
+}
+.drink p {
+  font-weight: bold;
+  text-transform: capitalize;
+  line-height: 1.8;
+}
+.drink span {
+  margin-right: 0.5rem;
+}
+.drink-data {
+  background: var(--primaryLightColor);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--mainBorderRadius);
+  color: var(--primaryColor);
+}
+.drink-info {
+  padding-top: 2rem;
+}
+@media screen and (min-width: 992px) {
+  .drink {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  .drink-info {
+    padding-top: 0;
+  }
+} 
